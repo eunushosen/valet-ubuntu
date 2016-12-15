@@ -1,5 +1,5 @@
 {
-    "name": "cpriego/valet-ubuntu",
+    "name": "eunus/valet-ubuntu",
     "description": "A more enjoyable local development experience for Ubuntu.",
     "keywords": ["laravel", "zonda", "wwdhhd", "ubuntu", "xenial", "16.04"],
     "license": "MIT",
@@ -15,6 +15,11 @@
         {
             "name": "Carlos Priego",
             "email": "carlos.enrique.priego@gmail.com"
+        }
+        ,
+        {
+            "name": "Eunus Hosen",
+            "email": "eunushosen@gmail.com"
         }
     ],
     "autoload": {
