@@ -3,8 +3,13 @@
 /**
  * Define the user's "~/.valet" path.
  */
-
-define('VALET_HOME_PATH', posix_getpwuid(fileowner(__FILE__))['dir'].'/.valet');
+// get current user's "~/.valet" path
+$homePath = posix_getpwuid(posix_getuid())['dir'] . '/.valet';
+// if current user does not have "~/.valet", use the file owner's path
+if ( ! is_dir($homePath)) {
+    $homePath = posix_getpwuid(fileowner(__FILE__))['dir'].'/.valet';
+}
+define('VALET_HOME_PATH', $homePath);
 
 /**
  * Show the Valet 404 "Not Found" page.
